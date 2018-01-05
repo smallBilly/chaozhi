@@ -48,6 +48,9 @@ ul,li{
     font-size: 24px;
     margin: 24px 15px;
 }
+.template-page-wrapper{
+    background: url('../images/bg.png') repeat-y left top;
+}
 .templatemo-content-wrapper {
     float: left;
     width: 100%;
@@ -845,3 +848,42 @@ textarea.ui-page-options-elevator input {
     fill: currentColor;
     overflow: hidden;
 }
+
+.mach-list{
+    border: 1px solid #EBEBEB;
+    background: #f6f6f6;
+    height: 50px;
+}
+.mach-list > ul > li{
+    float: left;
+    border-radius: 4px;
+    border: 1px solid #f6f6f6;
+    line-height: 30px;
+    padding: 0 25px;
+    margin: 10px 0 10px 10px;
+}
+.mach-list > ul > li a{
+    display: block;
+    color: #666;
+}
+.mach-list > ul > li.active{
+    border: 1px solid #56509F ;
+}
+.mach-list > ul > li.active a{
+    color: #56509F;
+}
+
+.shangcheng-list{
+    margin-right: -20px;
+}
+.shangcheng-list > ul > li.item{
+    float: left;
+    *display: inline;
+    width: 250px;
+    padding: 10px 9px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+}
+.shangcheng-list > ul > li.item .tit{}

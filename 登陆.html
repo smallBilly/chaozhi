@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+
+    <link rel="stylesheet" href="css/vue-beauty.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" class="container">
+    <div class="login-container" style="margin-top: 40px;">
+        <div class="text-center">
+            <img src="images/logo-3.png" alt="" style="width: 300px;">
+        </div>
+        <div class="text-center" style="margin: 20px 0;font-size: 26px;">
+            登陆您的账号
+        </div>
+
+        <div style="width: 360px;margin: 0 auto;">
+            <v-form direction="horizontal" :model="ruleForm" :rules="rules" ref="ruleForm">
+                <v-form-item label="" :label-col="labelCol" :wrapper-col="wrapperCol" prop="phoneNumber" has-feedback>
+                    <v-input placeholder="使用的手机号码" v-model="ruleForm.phoneNumber">
+                        <v-icon type="mobile" slot="before" style="font-size: 20px;"></v-icon>
+                    </v-input>
+                </v-form-item>
+
+                <v-form-item label="" :label-col="labelCol" :wrapper-col="wrapperCol">
+                    <div class="inline-block text-center" style="width: 55%;">
+                        <v-input placeholder="短信验证码" v-model="ruleForm.qcode">
+                            <v-icon type="safety" slot="before" style="font-size: 20px;"></v-icon>
+                        </v-input>
+                    </div>
+                    <div class="inline-block text-center" style="width: 40%;">
+                        <a href="javascript:;">获取验证码</a>
+                    </div>
+                </v-form-item>
+
+                <v-form-item :label-col="labelCol" :wrapper-col="wrapperCol">
+                    <v-button type="primary" html-type="submit"
+                              @click.prevent="submitForm('ruleForm')"
+                              style="display: block;width: 100%;font-size: 22px;">登录超职</v-button>
+                </v-form-item>
+
+                <v-form-item>
+                    <v-checkbox>登录即表示您同意《<a href="javascript:;" @click.prevent="visible = true">超职用户协议</a>》</v-checkbox>
+                </v-form-item>
+
+                <v-form-item>
+                    <div class="text-center">
+                        <a href="javascript:;">
+                            <i class="iconfont icon-return"></i>
+                            <span style="margin-left: 5px;">返回</span>
+                        </a>
+                    </div>
+                </v-form-item>
+            </v-form>
+        </div>
+
+
+        <v-modal title="查看用户协议"
+                 :visible="visible"
+                 :width="800"
+                 ok-text="同意协议"
+                 cancel-text="关闭"
+                 @ok="handleOk"
+                 @cancel="handleCancel">
+           <p>除非您已阅读并接受本协议所有条款，否则您无权使用腾讯游戏服务。如果您对本协议或腾讯游戏服务有意见或建议，可与腾讯客户服务部门联系，我们会给予您必要的帮助。您点击同意、接受或下一步，或您注册、使用腾讯游戏服务均视为您已阅读并同意签署本协议。
+               除非您已阅读并接受本协议所有条款，否则您无权使用腾讯游戏服务。如果您对本协议或腾讯游戏服务有意见或建议，可与腾讯客户服务部门联系，我们会给予您必要的帮助。您点击同意、接受或下一步，或您注册、使用腾讯游戏服务均视为您已阅读并同意签署本协议。
+               除非您已阅读并接受本协议所有条款，否则您无权使用腾讯游戏服务。如果您对本协议或腾讯游戏服务有意见或建议，可与腾讯客户服务部门联系，我们会给予您必要的帮助。您点击同意、接受或下一步，或您注册、使用腾讯游戏服务均视为您已阅读并同意签署本协议。
+               除非您已阅读并接受本协议所有条款，否则您无权使用腾讯游戏服务。如果您对本协议或腾讯游戏服务有意见或建议，可与腾讯客户服务部门联系，我们会给予您必要的帮助。您点击同意、接受或下一步，或您注册、使用腾讯游戏服务均视为您已阅读并同意签署本协议。
+               除非您已阅读并接受本协议所有条款，否则您无权使用腾讯游戏服务。如果您对本协议或腾讯游戏服务有意见或建议，可与腾讯客户服务部门联系，我们会给予您必要的帮助。您点击同意、接受或下一步，或您注册、使用腾讯游戏服务均视为您已阅读并同意签署本协议。</p>
+        </v-modal>
+    </div>
+
+    <div class="text-center">
+        北京XXX科技有限公司 版权所有 京ICP备17033346号
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+<script src="js/vue-beauty.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    var validatePhoneNumber = function(rule, value, callback) {
+        if(isMobileNum(value)){
+            callback();
+        }else{
+            callback(new Error('请确认您输入的手机号是否正确'));
+        }
+    };
+
+    /*var validateQcode = function(rule, value, callback) {
+        if(value.length >= 6){
+            callback();
+        }else{
+            callback(new Error('请确认您输入的验证码是否正确'));
+        }
+    };*/
+
+    new Vue({
+        el: "#app",
+        data: function () {
+            return {
+                labelCol: {
+                    span: 6
+                },
+                wrapperCol: {
+                    span: 24
+                },
+                ruleForm: {
+                    phoneNumber: '',
+                    qcode: ''
+
+                },
+                rules: {
+                    phoneNumber: [
+                        {
+                            required: true,
+                            message: '请确认您输入的手机号是否正确'
+                        },
+                        {
+                            validator: validatePhoneNumber
+                        }
+                    ],
+                    /*qcode: [
+                        {
+                            required: true,
+                            message: '请确认您输入的验证码是否正确'
+                        },
+                        {
+                            validator: validateQcode
+                        }
+                    ]*/
+                },
+                visible: false
+            }
+        },
+        methods: {
+            handleOk: function () {
+                this.visible = false;
+            },
+            handleCancel: function () {
+                this.visible = false;
+            },
+            submitForm: function(formName) {
+                this.$refs[formName].validate(function(valid) {
+                    if (valid) {
+                        alert('submit!');
+                    } else {
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
+            },
+        }
+    });
+</script>
+</body>
+</html>

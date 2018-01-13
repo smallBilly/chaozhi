@@ -144,20 +144,22 @@
         methods: {
             handleOk: function () {
                 this.visible = false;
+                console.log("同意协议")
             },
             handleCancel: function () {
                 this.visible = false;
+                console.log("关闭")
             },
             submitForm: function(formName) {
                 this.$refs[formName].validate(function(valid) {
                     if (valid) {
-                        alert('submit!');
+                        alert('提交了!');
                     } else {
                         console.log('error submit!!');
                         return false;
                     }
                 });
-            },
+            }
         }
     });
 </script>

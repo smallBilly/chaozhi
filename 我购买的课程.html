@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我购买的课程</title>
+
+    <link rel="stylesheet" href="css/vue-beauty.min.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+    <div class="ant-layout">
+        <div class="ant-layout-header">
+            <div class="logo">
+                <img src="./images/logo-1.png" alt="logo">
+            </div>
+            <ul class="ant-menu ant-menu-root ant-menu-horizontal ant-menu-dark">
+                <li class="ant-menu-item">
+                    <a>首页</a>
+                </li>
+                <li class="ant-menu-item ant-menu-item-selected">
+                    <a>课程分类</a>
+                </li>
+                <li class="ant-menu-item">
+                    <a>超职商城</a>
+                </li>
+                <li class="ant-menu-item">
+                    <a>关于超职</a>
+                </li>
+            </ul>
+            <div class="header-login">
+                <v-button ghost style="font-size: 16px;">免密登录超职</v-button>
+            </div>
+        </div>
+        <div class="ant-layout ant-layout-has-sider">
+            <div class="ant-layout-sider" style="">
+                <div class="color-9 padding-15">我的超职管理后台</div>
+                <ul class="ant-menu ant-menu-root ant-menu-inline ant-menu-light" style="height: 100%;">
+                    <li class="ant-menu-item">
+                        <div class="ant-menu-submenu-title">
+                            <a>
+                                <i class="iconfont icon-shouye"></i>
+                                <span class="margin-left-5">后台首页</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="ant-menu-item ant-menu-item-selected">
+                        <div class="ant-menu-submenu-title">
+                            <a>
+                                <i class="iconfont icon-baoming"></i>
+                                <span class="margin-left-5">我的报考资料</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="ant-menu-item">
+                        <div class="ant-menu-submenu-title">
+                            <a>
+                                <i class="iconfont icon-kecheng"></i>
+                                <span class="margin-left-5">我购买的课程</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ant-layout ant-layout-chaozhi">
+                <div class="ant-layout-content">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label>时间条件</label>
+                            <div class="input-icon icon-left margin-left-10">
+                                <input type="text" class="form-control"
+                                       placeholder="开始时间" value="" readonly style="cursor:pointer">
+                                <i class="iconfont icon-kecheng" style="cursor: pointer"></i>
+                            </div>
+                        </div>
+                        <div class="form-group margin-left-5">
+                            -
+                        </div>
+                        <div class="form-group margin-left-5">
+                            <div class="input-icon icon-left">
+                                <input type="text" class="form-control"
+                                       placeholder="结束时间" value="" readonly style="cursor:pointer">
+                                <i class="iconfont icon-kecheng" style="cursor: pointer"></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-azure margin-left-10">搜索</button>
+                    </form>
+                    <div class="margin-top-20">课程列表</div>
+                    <hr class="margin-top-10">
+                    <div class="kecheng-list">
+                        <ul class="clearfix">
+                            <li class="item">
+                                <div>
+                                    <img src="http://img.juimg.com/tuku/yulantu/121216/234733-12121621553935.jpg"
+                                         alt="" style="width: 230px;">
+                                </div>
+                                <div class="tit f-toe margin-top-15">剑桥英语第一册</div>
+                                <div class="price margin-top-5">600.00元</div>
+                                <div class="time color-9 margin-top-5">购买时间：2017-12-25 15:45</div>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <img src="http://img.juimg.com/tuku/yulantu/121216/234733-12121621553935.jpg"
+                                         alt="" style="width: 230px;">
+                                </div>
+                                <div class="tit f-toe margin-top-15">剑桥英语第一册</div>
+                                <div class="price margin-top-5">600.00元</div>
+                                <div class="time color-9 margin-top-5">购买时间：2017-12-25 15:45</div>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <img src="http://img.juimg.com/tuku/yulantu/121216/234733-12121621553935.jpg"
+                                         alt="" style="width: 230px;">
+                                </div>
+                                <div class="tit f-toe margin-top-15">剑桥英语第一册</div>
+                                <div class="price margin-top-5">600.00元</div>
+                                <div class="time color-9 margin-top-5">购买时间：2017-12-25 15:45</div>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <img src="http://img.juimg.com/tuku/yulantu/121216/234733-12121621553935.jpg"
+                                         alt="" style="width: 230px;">
+                                </div>
+                                <div class="tit f-toe margin-top-15">剑桥英语第一册</div>
+                                <div class="price margin-top-5">600.00元</div>
+                                <div class="time color-9 margin-top-5">购买时间：2017-12-25 15:45</div>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <img src="http://img.juimg.com/tuku/yulantu/121216/234733-12121621553935.jpg"
+                                         alt="" style="width: 230px;">
+                                </div>
+                                <div class="tit f-toe margin-top-15">剑桥英语第一册</div>
+                                <div class="price margin-top-5">600.00元</div>
+                                <div class="time color-9 margin-top-5">购买时间：2017-12-25 15:45</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-right">
+                        <v-pagination
+                                :total="100"
+                                :default-page-size="5"
+                                :page-size="10"
+                                show-size-changer
+                                show-quick-jumper
+                                :show-total="showTotal"
+                                size="small"
+                                :simple="false">
+                        </v-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.3.0/vue.min.js"></script>
+<script src="js/vue-beauty.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+    new Vue({
+        el: "#app",
+        data: function () {
+            return {}
+        },
+        methods: {
+            showTotal(total) {
+                return `全部 ${total} 条`;
+            },
+        }
+    });
+</script>
+</body>
+</html>

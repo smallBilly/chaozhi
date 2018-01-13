@@ -2,6 +2,21 @@ body,
 label{
     font-size: 14px;
 }
+table {
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-color: #ececec;
+}
+p {
+    margin: 0 0 10px;
+}
 .ant-form-item-label,
 .has-success.has-feedback:after,
 .has-warning.has-feedback:after,
@@ -143,6 +158,8 @@ label{
 .ant-input,
 .ant-btn{
     height: 44px;
+    line-height: 40px;
+    font-size: 14px;
 }
 
 .ant-input-group-addon{
@@ -302,3 +319,122 @@ label{
 .ant-layout-chaozhi{
     padding: 24px;
 }
+.ant-confirm-body .ant-confirm-content{
+    font-size: 14px;
+}
+.ui-step{
+    position: relative;
+    overflow: hidden;
+}
+.ui-step .bar{
+    position: absolute;
+    top: 20px;
+    left:0;
+    right: 0;
+    height: 2px;
+    background: #d8dce5;
+    z-index: 2;
+}
+.ui-step .item{
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+.ui-step .item .num{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    background: #dfdfdf;
+    font-size: 18px;
+    color: #56509F;
+}
+.ui-step .item.active .num{
+    background: #fe6500;
+    color: #fff;
+}
+.ui-table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.ui-table th {
+    padding: 10px;
+    font-weight: 400;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #ebedf1;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+.ui-table td {
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle;
+    text-align: left;
+}
+.ui-table.ui-table-nbr th,
+.ui-table.ui-table-nbr td{
+    border-right: 0;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.mach-list{
+    border: 1px solid #EBEBEB;
+    background: #f6f6f6;
+    height: 50px;
+}
+.mach-list > ul > li{
+    float: left;
+    border-radius: 4px;
+    border: 1px solid #f6f6f6;
+    line-height: 30px;
+    padding: 0 25px;
+    margin: 10px 0 10px 10px;
+}
+.mach-list > ul > li a{
+    display: block;
+    color: #666;
+}
+.mach-list > ul > li.active{
+    border: 1px solid #56509F ;
+}
+.mach-list > ul > li.active a{
+    color: #56509F;
+}
+
+.shangcheng-list{
+    margin-right: -20px;
+}
+.shangcheng-list > ul > li.item{
+    float: left;
+    *display: inline;
+    width: 670px;
+    padding: 10px 9px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+}
+.shangcheng-list > ul > li.item .tit{}
+.kecheng-list{
+    margin-right: -20px;
+}
+.kecheng-list > ul > li.item{
+    float: left;
+    *display: inline;
+    width: 250px;
+    padding: 10px 9px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+}
+.kecheng-list > ul > li.item .tit{}

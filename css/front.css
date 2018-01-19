@@ -18,6 +18,12 @@ hr{
 p {
     margin: 0 0 10px;
 }
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
 .ant-form-item-label,
 .has-success.has-feedback:after,
 .has-warning.has-feedback:after,
@@ -461,4 +467,99 @@ p {
 }
 .index-gg-menu li.active{
     background: #FF4000;
+}
+
+.index-ctn-btn1{
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 6px;
+    text-align: center;
+    background: #56509F ;
+    font-size: 16px;
+    color: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.index-ctn-btn1:hover{
+    background: #FF4000;
+    color: #fff;
+}
+.index-ctn-btn2{
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 6px;
+    text-align: center;
+    background: #FF4000 ;
+    font-size: 16px;
+    color: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.index-ctn-btn2:hover{
+    background: #56509F;
+    color: #fff;
+}
+
+.index-kecheng-btn1{
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background: #56509F;
+    font-size: 18px;
+    color: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.index-kecheng-btn1:hover{
+    color: #fff;
+}
+.index-kecheng-btn2{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    background: #fff;
+    font-size: 24px;
+    color: #FE741A;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.index-kecheng-btn2:hover{
+    color: #FE741A;
+}
+.index-xiangqing-btn{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 6px;
+    text-align: center;
+    background: #FF4000;
+    font-size: 16px;
+    color: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+.index-xiangqing-btn:hover{
+    background: #FF8100;
+    color: #fff;
 }

@@ -18,6 +18,11 @@ hr{
 p {
     margin: 0 0 10px;
 }
+.ant-btn-background-ghost:hover{
+    border-color: #fff;
+    background: #fff !important;
+    color: #56509F;
+}
 .ant-form-item-label,
 .has-success.has-feedback:after,
 .has-warning.has-feedback:after,
@@ -268,7 +273,7 @@ p {
     background: #56509F url('../images/top_bg.png') left top repeat-x;
 }
 .ant-menu-dark.ant-menu-horizontal{
-    line-height: 80px;
+    line-height: 75px;
     background: none;
     float: left;
 }
@@ -287,10 +292,11 @@ p {
 }
 .ant-menu.ant-menu-dark .ant-menu-item-selected{
     background: none;
-    color: #333;
+    border-bottom: 5px solid #fff;
+    color: #fff;
 }
 .ant-menu.ant-menu-dark .ant-menu-item-selected > a{
-    color: #333;
+    color: #fff;
 }
 .ant-layout-sider{
     flex: 0 0 180px;
@@ -390,7 +396,6 @@ p {
 .mach-list{
     border: 1px solid #EBEBEB;
     background: #f6f6f6;
-    height: 50px;
 }
 .mach-list > ul > li{
     float: left;

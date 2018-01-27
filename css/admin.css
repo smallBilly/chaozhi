@@ -161,10 +161,21 @@ p {
     border-left-color: #d9d9d9;
 }
 
+.ant-btn-warning {
+    color: #fff;
+    background-color: #FE6500;
+    border-color: #FE6500;
+}
+
 .ant-input,
 .ant-btn{
     height: 44px;
     line-height: 40px;
+    font-size: 14px;
+}
+.ant-btn-sm{
+    height: 30px;
+    line-height: 28px;
     font-size: 14px;
 }
 
@@ -370,7 +381,7 @@ p {
     font-weight: 400;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    background: #ebedf1;
+    background: #fcfcfc;
     font-size: 14px;
     text-align: center;
     color: #333;
@@ -444,3 +455,20 @@ p {
     border: 1px solid #e8e8e8;
 }
 .kecheng-list > ul > li.item .tit{}
+
+.admin-tab{
+    background: #F3F3F3;
+}
+.admin-tab li{
+    padding: 0 20px;
+    line-height: 44px;
+    float: left;
+    border-bottom: 4px solid #F3F3F3;
+}
+.admin-tab li a{
+    display: block;
+    color: #333;
+}
+.admin-tab li.active{
+    border-bottom-color: #56509F;
+}

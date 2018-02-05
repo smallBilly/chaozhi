@@ -13,8 +13,7 @@
             data: param,
             dataType: "json",
             beforeSend: function (xhr) {
-                console.log(url != "/api/login" || url != "/api/phone-captcha")
-                if(url != "/api/login" || url != "/api/phone-captcha"){
+                if(url != "/api/login" && url != "/api/phone-captcha"){
                     var userToken = $.cookie("userToken");
                     console.log(userToken);
                     console.log("!=====");
@@ -24,7 +23,7 @@
                 }
             },
             success: function (data) {
-                /*if(data.code === 200){
+                if(data.code === 200){
                     defer.resolve(data);
                 }else{
                     //alert(data.msg);
@@ -34,7 +33,7 @@
                         content: '出错内容：' + data.msg
                     });
                     defer.reject();
-                }*/
+                }
             }
         });
         return defer.promise();
